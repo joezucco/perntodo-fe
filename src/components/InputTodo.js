@@ -1,4 +1,8 @@
+import React, { useState } from "react";
+
 const InputTodo = () => {
+  const [description, setDescription] = useState("");
+
   return (
     <>
       <h1 className='text-center mt-5'>Input Todo</h1>
