@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 
 const ListTodos = () => {
+  const [todos, setTodos] = useState([]);
+
   const getTodos = async () => {
     try {
       const response = await fetch("http://localhost:3000/todos");
       const jsonData = await response.json();
 
-      console.log(jsonData);
+      setTodos(jsonData);
     } catch (err) {
       console.error(err.message);
     }
@@ -14,7 +16,8 @@ const ListTodos = () => {
 
   useEffect(() => {
     getTodos();
-  });
+  }, []);
+
   return (
     <>
       <table class='table mt-5 text-center'>
