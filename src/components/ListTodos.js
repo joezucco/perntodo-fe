@@ -1,7 +1,8 @@
-export const ListTodos = () => {
+const ListTodos = () => {
     return (
-        <div>
-            
-        </div>
+<h1>List Todos</h1>
     )
 }
+
+export default ListTodos
+
